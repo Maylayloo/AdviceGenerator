@@ -1,0 +1,88 @@
+:root {
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkBlue);
+    height: 98vh;
+}
+p {
+    color: var(--lightCyan);
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+}
+span {
+    color: var(--neonGreen);
+    font-family: 'Manrope', sans-serif;
+    font-size: .75rem;
+    letter-spacing: .25rem;
+}
+#card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkGrayishBlue);
+    align-items: center;
+    width: 35rem;
+    height: 22rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#adviceID {
+    margin-top: 3rem;
+}
+#divider {
+    position: absolute;
+    bottom: 4.5rem;
+}
+#new_advice {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    bottom: -2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neonGreen);
+}
+#new_advice:hover {
+    box-shadow: 0 0 1.75rem var(--neonGreen);
+}
+
+@media(max-width: 500px) {
+    body {
+        padding: 0 .8rem;
+    }
+
+    #card {
+        width: 30rem;
+        height: 24rem;
+        margin-top: -30%;
+    }
+
+    #divider {
+
+        content: url("images/pattern-divider-mobile.svg");
+    }
+    #new_advice:hover {
+        box-shadow: none;
+    }
+    #new_advice:active {
+        box-shadow: 0 0 1.75rem var(--neonGreen);
+    }
+}
